@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="BeyondRetarget Plus: Data Engine for Generating Robot Motion Data from Internet-Scale Human Videos">
+  <title>BeyondRetarget Plus: Data Engine for Generating Robot Motion Data from Internet-Scale Human Videos</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css?v=3d65b572c41b">
+</head>
+<body>
+  <nav class="floating-nav" aria-label="Section navigation">
+    <button class="nav-trigger" aria-label="Open navigation">☰</button>
+    <div class="nav-panel">
+      <a href="#video">Video</a>
+      <a href="#page-turning-video">Demo Videos</a>
+      <a href="#teleoperation-video">Teleoperation</a>
+      <a href="#abstract">Abstract</a>
+      <a href="#approach">Approach</a>
+      <a href="#failure-case">Failure Case</a>
+      <a href="#bibtex">BibTeX</a>
+    </div>
+  </nav>
+
+  <header id="video" class="hero">
+    <div class="cover-perspective" aria-hidden="true">
+      <div class="dataset-wall">
+        <div class="wall-column">
+          <div class="wall-tile ratio-235"><video data-wall-video muted loop playsinline preload="none" poster="assets/posters/mc-dance-2.jpg"><source data-src="assets/cover/mc-dance-2.mp4" type="video/mp4"></video></div>
+          <div class="wall-tile ratio-2"><video data-wall-video muted loop playsinline preload="none" poster="assets/posters/new-4.jpg"><source data-src="assets/cover/new-4.mp4" type="video/mp4"></video></div>
+          <div class="wall-tile ratio-235"><video data-wall-video muted loop playsinline preload="none" poster="assets/posters/tennis-1.jpg"><source data-src="assets/cover/tennis-1.mp4" type="video/mp4"></video></div>
+          <div class="wall-tile ratio-43"><video data-wall-video muted loop playsinline preload="none" poster="assets/posters/new-5.jpg"><source data-src="assets/cover/new-5.mp4" type="video/mp4"></video></div>
+          <div class="wall-tile ratio-2"><video data-wall-video muted loop playsinline preload="none" poster="assets/posters/sunset-dance.jpg"><source data-src="assets/cover/sunset-dance.mp4" type="video/mp4"></video></div>
+          <div class="wall-tile ratio-169"><video data-wall-video muted loop playsinline preload="none" poster="assets/posters/new-6.jpg"><source data-src="assets/cover/new-6.mp4" type="video/mp4"></video></div>
+        </div>
+        <div class="wall-column">
+          <div class="wall-tile ratio-43"><video data-wall-video muted loop playsinline preload="none" poster="assets/posters/new-5.jpg"><source data-src="assets/cover/new-5.mp4" type="video/mp4"></video></div>
+          <div class="wall-tile ratio-169"><video data-wall-video muted loop playsinline preload="none" poster="assets/posters/new-12.jpg"><source data-src="assets/cover/new-12.mp4" type="video/mp4"></video></div>
+          <div class="wall-tile ratio-169"><video data-wall-video muted loop playsinline preload="none" poster="assets/posters/new-6.jpg"><source data-src="assets/cover/new-6.mp4" type="video/mp4"></video></div>
+          <div class="wall-tile ratio-235"><video data-wall-video muted loop playsinline preload="none" poster="assets/posters/mc-dance-1.jpg"><source data-src="assets/cover/mc-dance-1.mp4" type="video/mp4"></video></div>
+        </div>
+        <div class="wall-column">
+          <div class="wall-tile ratio-2"><video data-wall-video muted loop playsinline preload="none" poster="assets/posters/sunset-dance.jpg"><source data-src="assets/cover/sunset-dance.mp4" type="video/mp4"></video></div>
+          <div class="wall-tile ratio-235"><video data-wall-video muted loop playsinline preload="none" poster="assets/posters/jump-rope.jpg"><source data-src="assets/cover/jump-rope.mp4" type="video/mp4"></video></div>
+          <div class="wall-tile ratio-235"><video data-wall-video muted loop playsinline preload="none" poster="assets/posters/ballet-2.jpg"><source data-src="assets/cover/ballet-2.mp4" type="video/mp4"></video></div>
+          <div class="wall-tile ratio-169"><video data-wall-video muted loop playsinline preload="none" poster="assets/posters/skating.jpg"><source data-src="assets/cover/skating.mp4" type="video/mp4"></video></div>
+          <div class="wall-tile ratio-169"><video data-wall-video muted loop playsinline preload="none" poster="assets/posters/new-8.jpg?v=8d9f1950643d"><source data-src="assets/cover/new-8.mp4?v=fc480fd4b765" type="video/mp4"></video></div>
+          <div class="wall-tile ratio-235"><video data-wall-video muted loop playsinline preload="none" poster="assets/posters/mc-dance-2.jpg"><source data-src="assets/cover/mc-dance-2.mp4" type="video/mp4"></video></div>
+        </div>
+        <div class="wall-column">
+          <div class="wall-tile ratio-2"><video data-wall-video muted loop playsinline preload="none" poster="assets/posters/new-4.jpg"><source data-src="assets/cover/new-4.mp4" type="video/mp4"></video></div>
+          <div class="wall-tile ratio-235"><video data-wall-video muted loop playsinline preload="none" poster="assets/posters/tennis-1.jpg"><source data-src="assets/cover/tennis-1.mp4" type="video/mp4"></video></div>
+          <div class="wall-tile ratio-43"><video data-wall-video muted loop playsinline preload="none" poster="assets/posters/new-5.jpg"><source data-src="assets/cover/new-5.mp4" type="video/mp4"></video></div>
+          <div class="wall-tile ratio-2"><video data-wall-video muted loop playsinline preload="none" poster="assets/posters/sunset-dance.jpg"><source data-src="assets/cover/sunset-dance.mp4" type="video/mp4"></video></div>
+          <div class="wall-tile ratio-169"><video data-wall-video muted loop playsinline preload="none" poster="assets/posters/skating.jpg"><source data-src="assets/cover/skating.mp4" type="video/mp4"></video></div>
+        </div>
+        <div class="wall-column">
+          <div class="wall-tile ratio-169"><video data-wall-video muted loop playsinline preload="none" poster="assets/posters/new-6.jpg"><source data-src="assets/cover/new-6.mp4" type="video/mp4"></video></div>
+          <div class="wall-tile ratio-169"><video data-wall-video muted loop playsinline preload="none" poster="assets/posters/new-8.jpg?v=8d9f1950643d"><source data-src="assets/cover/new-8.mp4?v=fc480fd4b765" type="video/mp4"></video></div>
+          <div class="wall-tile ratio-235"><video data-wall-video muted loop playsinline preload="none" poster="assets/posters/mc-dance-2.jpg"><source data-src="assets/cover/mc-dance-2.mp4" type="video/mp4"></video></div>
+          <div class="wall-tile ratio-2"><video data-wall-video muted loop playsinline preload="none" poster="assets/posters/new-4.jpg"><source data-src="assets/cover/new-4.mp4" type="video/mp4"></video></div>
+          <div class="wall-tile ratio-235"><video data-wall-video muted loop playsinline preload="none" poster="assets/posters/tennis-1.jpg"><source data-src="assets/cover/tennis-1.mp4" type="video/mp4"></video></div>
+          <div class="wall-tile ratio-43"><video data-wall-video muted loop playsinline preload="none" poster="assets/posters/new-5.jpg"><source data-src="assets/cover/new-5.mp4" type="video/mp4"></video></div>
+        </div>
+      </div>
+    </div>
+    <div class="cover-shade"></div>
+    <div class="cover-grain"></div>
+    <div class="hero-content">
+      <h1 class="hero-project-name">BeyondRetarget Plus</h1>
+      <p class="hero-subtitle">A Internet-Scale Robot Motion Data Generation Framework</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="section paper-intro">
+      <div class="container narrow center">
+        <h2 class="project-title">BeyondRetarget Plus: Data Engine for Generating Robot Motion Data from Internet-Scale Human Videos</h2>
+        <p class="authors">
+          <a href="https://bear-ty.github.io/bear_ty/" target="_blank" rel="noopener noreferrer">Tianyu Xiong<sup>1,*</sup></a>
+          <a href="https://yeelou.github.io/" target="_blank" rel="noopener noreferrer">Yi Lu<sup>1,*</sup></a>
+          <span>Jinrui Wang<sup>1</sup></span>
+          <span>Ziqi Liang<sup>1</sup></span>
+          <span>Dandan Lei<sup>3</sup></span>
+          <span>Xiaoyang Zhou<sup>4</sup></span>
+          <span>Xiao-xiao Long<sup>2</sup></span>
+          <a href="https://shenqiu.njucite.cn/" target="_blank" rel="noopener noreferrer">Qiu Shen<sup>1,†</sup></a>
+          <a href="https://cite.nju.edu.cn/People/Faculty/20190621/i5054.html" target="_blank" rel="noopener noreferrer">Xun Cao<sup>1</sup></a>
+        </p>
+        <div class="affiliation-list">
+          <p><sup>1</sup>School of Electronic Science and Engineering, Nanjing University, Nanjing, China</p>
+          <p><sup>2</sup>School of Intelligence Science and Technology, Nanjing University, Suzhou, China</p>
+          <p><sup>3</sup>Jiangsu Mobile Information System Integration Co., Ltd., Nanjing, China</p>
+          <p><sup>4</sup>China Mobile Zijin (Jiangsu) Innovation Research Institute Co., Ltd., Nanjing, China</p>
+        </div>
+        <p class="notes"><sup>*</sup>Equal contribution · <sup>†</sup>Corresponding author</p>
+        <div class="button-row">
+          <a class="button dark" href="https://github.com/bear-ty/BeyondRetarget_plus" target="_blank" rel="noopener noreferrer">⌘ GitHub</a>
+          <a class="button dark" href="#">◈ Hugging Face <small>coming soon</small></a>
+          <a class="button dark" href="https://bear-ty.github.io/Beyondretarget_page/" target="_blank" rel="noopener noreferrer">base version</a>
+        </div>
+        <p class="version-note"><strong>BeyondRetarget (base)</strong> focuses on real-time monocular-video retargeting and teleoperation. <strong>BeyondRetarget Plus</strong> extends the base method with global trajectory modeling, moving-camera support, and improved generalization and motion reconstruction for offline robot motion data generation from Internet-scale human videos.</p>
+      </div>
+    </section>
+
+    <section id="page-turning-video" class="section demo-section" aria-label="Video demonstrations">
+      <h2 class="sr-only">Video demonstrations</h2>
+      <div class="container wide">
+        <div class="demo-player">
+          <div class="demo-viewport" tabindex="0">
+            <video id="demo-video" playsinline preload="metadata" src="assets/videos/skating.mp4" poster="assets/posters/skating.jpg"></video>
+            <button class="demo-arrow demo-prev" type="button" aria-label="Previous video">‹</button>
+            <button class="demo-arrow demo-next" type="button" aria-label="Next video">›</button>
+          </div>
+          <div class="demo-toolbar">
+            <button id="demo-play" class="demo-control primary" type="button">Play</button>
+            <button id="demo-restart" class="demo-control" type="button">Restart</button>
+            <input id="demo-seek" type="range" min="0" max="1000" value="0" step="1" aria-label="Video progress">
+            <span class="demo-time"><span id="demo-current">00:00</span> / <span id="demo-duration">00:00</span></span>
+            <label class="demo-speed">Speed
+              <select id="demo-speed" aria-label="Playback speed">
+                <option value="0.5">0.5×</option>
+                <option value="0.75">0.75×</option>
+                <option value="1" selected>1×</option>
+                <option value="1.25">1.25×</option>
+                <option value="1.5">1.5×</option>
+                <option value="2">2×</option>
+              </select>
+            </label>
+          </div>
+          <div class="demo-pagination" role="group" aria-label="Choose video">
+            <button class="demo-page active" type="button" data-video="assets/videos/skating.mp4" aria-pressed="true">01<span>Skating</span></button>
+            <button class="demo-page" type="button" data-video="assets/videos/new-8.mp4?v=8186a352ba66" aria-pressed="false">02<span>side flip</span></button>
+            <button class="demo-page" type="button" data-video="assets/videos/mc-dance-2.mp4" aria-pressed="false">03<span>MC Dance 2</span></button>
+            <button class="demo-page" type="button" data-video="assets/videos/headset.mp4" aria-pressed="false">04<span>Headset</span></button>
+            <button class="demo-page" type="button" data-video="assets/videos/tennis-1.mp4" aria-pressed="false">05<span>Tennis</span></button>
+            <button class="demo-page" type="button" data-video="assets/videos/sunset-dance.mp4" aria-pressed="false">06<span>Sunset Dance</span></button>
+            <button class="demo-page" type="button" data-video="assets/videos/new-12.mp4" aria-pressed="false">07<span>Up/Down Stairs</span></button>
+            <button class="demo-page" type="button" data-video="assets/videos/new-6.mp4" aria-pressed="false">08<span>Sit Down</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="teleoperation-video" class="section section-alt">
+      <div class="container wide">
+        <h2>Teleoperation Video</h2>
+        <div class="media-placeholder">
+          <span>Teleoperation video coming soon</span>
+        </div>
+        <p class="caption">Video 2. Placeholder for the real-time teleoperation demonstration.</p>
+      </div>
+    </section>
+
+    <section id="abstract" class="section">
+      <div class="container narrow">
+        <h2>Abstract</h2>
+        <p class="abstract-copy">Internet human videos contain rich demonstrations of everyday behavior, but converting them into executable robot motion at scale remains challenging. BeyondRetarget Plus presents a scalable framework for collecting robot-ready motion data directly from massive in-the-wild human videos. The framework combines visual motion understanding, robot-aware adaptation, temporal consistency, and contact-aware refinement to transform unconstrained video observations into physically plausible and executable robot trajectories. By supporting diverse humanoid embodiments and reducing the need for costly motion-capture collection, BeyondRetarget Plus provides a practical path toward large-scale robot motion data construction from Internet videos.</p>
+      </div>
+    </section>
+
+    <section id="approach" class="section section-alt">
+      <div class="container wide">
+        <h2>Approach</h2>
+        <p class="section-lead center">BeyondRetarget Plus extends the base method with global trajectory modeling, moving-camera support, and delivers stronger generalization capability and motion reconstruction performance.</p>
+        <div class="approach-grid">
+          <article class="flip-card">
+            <div class="flip-inner">
+              <div class="flip-front media-placeholder card-placeholder">
+                <span>Improved Base Model and Trajectory Estimation</span>
+              </div>
+              <div class="flip-back">
+                <p>Coming soon</p>
+              </div>
+            </div>
+          </article>
+          <article class="flip-card">
+            <div class="flip-inner">
+              <div class="flip-front media-placeholder card-placeholder">
+                <span>A Larger, More Comprehensive Training Dataset</span>
+              </div>
+              <div class="flip-back">
+                <p>Coming soon</p>
+              </div>
+            </div>
+          </article>
+          <article class="flip-card">
+            <div class="flip-inner">
+              <div class="flip-front media-placeholder card-placeholder">
+                <span>Improved Robot Motion Supervision</span>
+              </div>
+              <div class="flip-back">
+                <p>Coming soon</p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p class="caption">Hover over a card to reveal its description.</p>
+      </div>
+    </section>
+
+    <section id="failure-case" class="section">
+      <div class="container wide">
+        <h2>Failure Case</h2>
+        <p class="failure-note">Camera motion estimation may struggle with videos featuring overly uniform backgrounds, potentially leading to abnormal trajectories. Highly dynamic and challenging motions may cause estimation failures due to motion blur and out-of-distribution (OOD) inputs.</p>
+        <div class="failure-grid">
+          <figure class="failure-card">
+            <video controls muted loop playsinline preload="metadata" poster="assets/posters/failure-figure-skating.jpg"><source src="assets/videos/failure-figure-skating.mp4" type="video/mp4"></video>
+            <figcaption>Figure skating failure case</figcaption>
+          </figure>
+          <figure class="failure-card">
+            <video controls muted loop playsinline preload="metadata" poster="assets/posters/failure-gymnastics.jpg"><source src="assets/videos/failure-gymnastics.mp4" type="video/mp4"></video>
+            <figcaption>Gymnastics failure case</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="bibtex" class="section section-alt">
+      <div class="container narrow">
+        <h2>BibTeX</h2>
+        <pre class="bibtex"><code>@misc{xiong2026beyondretarget,
+  title={BeyondRetarget: Learning Executable Humanoid Motions Directly from Monocular Video},
+  author={Tianyu Xiong and Yi Lu and Jinrui Wang and Ziqi Liang and Dandan Lei and Xiaoyang Zhou and Xiao-xiao Long and Qiu Shen and Xun Cao},
+  year={2026},
+  eprint={2609.29850},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO},
+  url={https://arxiv.org/abs/2609.29850},
+}</code></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container center"><p>BeyondRetarget Plus · Project page placeholder</p></div></footer>
+  <script src="script.js?v=a98712b05a25"></script>
+</body>
+</html>
